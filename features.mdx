@@ -1,0 +1,132 @@
+---
+title: Core Features
+description: Explore the essential features of Michael Chen for building and maintaining comprehensive project documentation.
+---
+
+## Overview
+
+Michael Chen provides powerful tools to manage your project documentation effectively. You organize content hierarchically, collaborate in real-time, search efficiently, and share or export documents seamlessly. These core features help you maintain a centralized knowledge base.
+
+<Columns cols={2}>
+  <Card title="Document Hierarchies" icon="layers" href="#organization">
+    Structure your docs with nested pages and folders.
+  </Card>
+  <Card title="Real-time Collaboration" icon="users" href="#collaboration">
+    Edit documents simultaneously with your team.
+  </Card>
+  <Card title="Advanced Search" icon="search" href="#search">
+    Find content quickly with filters and full-text search.
+  </Card>
+  <Card title="Export Options" icon="download" href="#export">
+    Share docs as PDF, Markdown, or public links.
+  </Card>
+</Columns>
+
+## Document Organization and Hierarchies
+
+Create a clear structure for your documentation using nested pages and folders. You build hierarchies that reflect your project's architecture, making navigation intuitive.
+
+<Steps>
+  <Step title="Create Folders" icon="folder">
+    Start by creating top-level folders for major sections like `API Reference` or `User Guides`.
+
+````bash
+# In the UI, click "New Folder"
+# Name it "API Reference"
+````
+  </Step>
+  <Step title="Add Nested Pages" icon="file-text">
+    Within folders, add pages and sub-pages for detailed topics.
+
+````markdown
+# API Reference (Top-level page)
+/api
+  /endpoints
+    /users.mdx
+    /auth.mdx
+  /schemas
+````
+  </Step>
+  <Step title="Reorder with Drag-and-Drop" icon="move">
+    Drag pages to reorder or nest them dynamically.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Use hierarchies to mirror your project's codebase structure for easier maintenance.
+</Callout>
+
+## Collaboration and Real-time Editing
+
+Invite team members to co-edit documents live. Changes appear instantly, with version history to track contributions.
+
+<Tabs>
+  <Tab title="Invite Collaborators" icon="user-plus">
+    Share a document link or add emails via the sharing panel.
+  </Tab>
+  <Tab title="Live Cursor and Comments" icon="cursor-text">
+    See others' cursors and add inline comments.
+
+````jsx
+// Example: Real-time updates in a shared doc
+const docContent = useRealtimeDoc('project-guide');
+// Cursor positions sync automatically
+````
+  </Tab>
+  <Tab title="Version History" icon="git-branch">
+    Revert changes or compare versions easily.
+  </Tab>
+</Tabs>
+
+## Search and Filtering Tools
+
+Locate any document or section quickly with full-text search and advanced filters.
+
+| Filter Type | Description | Example |
+|-------------|-------------|---------|
+| Full-text | Searches titles and content | `authentication API` |
+| Tags | Filters by custom labels | `feature`, `bugfix` |
+| Date Range | Recent changes only | Last 7 days |
+| Author | Content by specific user | `@john.doe` |
+
+<CodeGroup tabs="JavaScript,Python">
+```javascript
+// Client-side search example
+const results = searchDocs('authentication', { tags: ['api'] });
+console.log(results);
+```
+```python
+# Server-side search
+results = client.search('authentication', tags=['api'])
+print(results)
+```
+</CodeGroup>
+
+## Export and Sharing Options
+
+Publish your docs publicly or export them for offline use.
+
+<Expandable title="Export Formats" default-open="true">
+Supported formats include PDF, Markdown, HTML, and ZIP archives. You select pages or entire hierarchies.
+
+```bash
+# Command-line export example
+michaelchen export --project=my-docs --format=pdf --output=./exports/
+```
+</Expandable>
+
+<Expandable title="Public Sharing">
+Generate shareable links with optional passwords or expiration dates. Embed docs in websites using iframes.
+
+````html
+<iframe src="https://docs.michaelchen.com/my-project/embed" width="100%" height="600"></iframe>
+````
+</Expandable>
+
+<Callout kind="success">
+Combine these features to streamline your documentation workflow from creation to sharing.
+</Callout>
+
+## Next Steps
+
+Explore [Quickstart](/quickstart) for setup or [Authentication](/authentication) for secure access. Customize hierarchies to fit your projects today.

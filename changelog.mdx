@@ -1,0 +1,148 @@
+---
+title: Changelog
+description: Track the evolution of Michael Chen with details on recent updates, new features, and improvements.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Check this changelog regularly to stay informed about new features, bug fixes, and breaking changes in Michael Chen. Subscribe to updates via the dashboard at `https://dashboard.example.com/notifications`.
+</Callout>
+
+<Columns cols={3}>
+  <Card title="Latest Release" icon="zap" href="#v1-2-0">
+    v1.2.0 brings enhanced documentation management and performance boosts.
+  </Card>
+  <Card title="Upgrade Guide" icon="rocket" href="/quickstart">
+    Follow our quickstart to upgrade seamlessly.
+  </Card>
+  <Card title="Report Issues" icon="bug" href="https://github.com/your-repo/issues" target="_blank">
+    Found a bug? Help us improve Michael Chen.
+  </Card>
+</Columns>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documentation spaces
+- Introduced customizable brand colors and themes (e.g., `#438EEA`)
+- New search functionality with full-text indexing across all docs
+
+## Improvements
+
+- Faster page loads with optimized MDX rendering
+- Better mobile responsiveness for login and dashboard views
+
+## Bug Fixes
+
+- Fixed CAPS LOCK detection in login form
+- Resolved loading spinner issues during authentication
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated Mackinac Island location-based content modules
+- Added password recovery workflows with secure links
+
+## Bug Fixes
+
+- Corrected "Did you forget your password?" link navigation
+- Fixed "Not your company?" redirect to external login
+
+## Improvements
+
+- Enhanced username recovery prompts for community admins
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Initial Release
+
+- Core documentation management system
+- Basic login with username/password authentication
+- Default space creation for project organization
+
+## Breaking Changes
+
+- Initial setup requires new configuration format
+
+```
+config.json
+{
+  "brandColor": "#438EEA",
+  "defaultSpace": "Michael Chen"
+}
+```
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to upgrade to the latest version.
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+
+    Create a backup of your current documentation space.
+
+````bash
+cp -r /path/to/michael-chen /backup/location
+````
+
+  </Step>
+  <Step title="Update Package" icon="download">
+
+    <Tabs>
+      <Tab title="npm" icon="package">
+````bash
+npm install michael-chen@latest
+````
+      </Tab>
+      <Tab title="yarn" icon="package">
+````bash
+yarn add michael-chen@latest
+````
+      </Tab>
+    </Tabs>
+
+  </Step>
+  <Step title="Run Migrations" icon="settings">
+
+    Execute database migrations if applicable.
+
+````bash
+npm run migrate
+````
+
+    Review any `{breaking changes}` from the latest release notes.
+
+  </Step>
+  <Step title="Restart Service" icon="play">
+
+    Restart your Michael Chen instance.
+
+````bash
+systemctl restart michael-chen
+# or
+npm start
+````
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  After upgrading, verify your login form and custom themes. For issues, check the full version history or contact support.
+</Callout>
+
+## Version Summary
+
+| Version | Date       | Key Changes                  |
+|---------|------------|------------------------------|
+| v1.2.0  | 2024-10-15 | Collaboration, search        |
+| v1.1.0  | 2024-09-20 | Auth improvements            |
+| v1.0.0  | 2024-08-10 | Initial release              |
